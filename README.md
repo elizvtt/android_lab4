@@ -4,3 +4,5 @@
 
 ### Завдання №2
 Для успішного виконання другого завдання необхідно реалізувати гортання фрагментів за допомогою `ViewPager2` спільно з `TabLayout` або `BottomNavigationView`
+
+використано [іконки](https://www.flaticon.com/ru/search?author_id=1&style_id=7&type=standard&word=)
