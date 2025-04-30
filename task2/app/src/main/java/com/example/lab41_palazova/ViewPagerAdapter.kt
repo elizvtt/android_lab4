@@ -6,8 +6,10 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 
 class ViewPagerAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) {
 
+    // загальна кількість фрагментів
     override fun getItemCount(): Int = 5
 
+    // створення фрагмента відповідно до позиції у ViewPager
     override fun createFragment(position: Int): Fragment {
         return when (position) {
             0 -> Fragment1()

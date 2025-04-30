@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.example.lab41_palazova.databinding.ActivityMainBinding
+import androidx.core.view.get
 
 
 class MainActivity : AppCompatActivity() {
@@ -20,13 +21,15 @@ class MainActivity : AppCompatActivity() {
         pagerAdapter = ViewPagerAdapter(this)
         binding.viewPager.adapter = pagerAdapter
 
+        // оновлення елементів у нижній навігації
         binding.viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
-                binding.bottomNavigation.menu.getItem(position).isChecked = true
+                binding.bottomNavigation.menu[position].isChecked = true
             }
         })
 
+        // обробник натискань на пункти нижнього меню
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.item_1 -> binding.viewPager.currentItem = 0

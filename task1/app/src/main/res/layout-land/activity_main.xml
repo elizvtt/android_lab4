@@ -7,8 +7,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
-        android:id="@+id/frame1"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment1"
+        android:name="com.example.lab4_palazova.Fragment1"
         android:layout_width="268dp"
         android:layout_height="407dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -16,49 +17,45 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.0"/>
 
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/frame2"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment2"
+        android:name="com.example.lab4_palazova.Fragment2"
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:background="#760404"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/frame3"
+        app:layout_constraintEnd_toStartOf="@+id/fragment3"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/frame1"
+        app:layout_constraintStart_toEndOf="@+id/fragment1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-    </FrameLayout>
+        app:layout_constraintVertical_bias="0.0"/>
 
 
-    <FrameLayout
-        android:id="@+id/frame3"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment3"
+        android:name="com.example.lab4_palazova.Fragment3"
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:background="#740994"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/frame2"
+        app:layout_constraintStart_toEndOf="@+id/fragment2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-    </FrameLayout>
+        app:layout_constraintVertical_bias="0.0"/>
 
 
 
-    <FrameLayout
-        android:id="@+id/frame4"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment4"
+        android:name="com.example.lab4_palazova.Fragment4"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/frame1"
-        app:layout_constraintTop_toBottomOf="@+id/frame2"
-        app:layout_constraintVertical_bias="0.5">
-    </FrameLayout>
+        app:layout_constraintStart_toEndOf="@+id/fragment1"
+        app:layout_constraintTop_toBottomOf="@+id/fragment2"
+        app:layout_constraintVertical_bias="0.5"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-<!--    android:background="@android:color/holo_blue_bright"-->

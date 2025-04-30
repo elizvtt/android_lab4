@@ -22,6 +22,7 @@ class Fragment2 : Fragment() {
         return inflater.inflate(R.layout.fragment2_layout, container, false)
     }
 
+    // метод, який викликається, коли інтерфейс створено
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         viewModel = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
 
@@ -30,10 +31,10 @@ class Fragment2 : Fragment() {
         buttonP.setOnClickListener {
             viewModel.increment()
 
+            // швидке оновлення Toast повідомлень
             toast?.cancel()
             toast = Toast.makeText(requireContext(), "${viewModel.counter.value}", Toast.LENGTH_SHORT)
             toast?.show()
-//            Toast.makeText(requireContext(), "${viewModel.counter.value}", Toast.LENGTH_SHORT).show()
         }
     }
 }

@@ -34,8 +34,6 @@ class Fragment3 : Fragment() {
             toast?.cancel()
             toast = Toast.makeText(requireContext(), "${viewModel.counter.value}", Toast.LENGTH_SHORT)
             toast?.show()
-
-//            Toast.makeText(requireContext(), "${viewModel.counter.value}", Toast.LENGTH_SHORT).show()
         }
     }
 }

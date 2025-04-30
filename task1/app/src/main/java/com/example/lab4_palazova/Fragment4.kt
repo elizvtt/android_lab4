@@ -12,6 +12,7 @@ class Fragment4 : Fragment() {
 
     private lateinit var switch: Switch
     private lateinit var imageView: ImageView
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -23,16 +24,18 @@ class Fragment4 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Найти по id элементы из fragment4_layout
+        // знаходимо елементи по id
         switch = view.findViewById(R.id.switch1)
         imageView = view.findViewById(R.id.imageView2)
 
-        // Установить слушатель переключателя
+        // встановлюємо обробник події для перемикача
         switch.setOnCheckedChangeListener { _, isChecked ->
+            // якщо перемикач увімкнено — відображаємо зображення img3
+            // якщо перемикач вимкнено — відображаємо зображення img2
             if (isChecked) {
-                imageView.setImageResource(R.drawable.img3) // когда switch включен
+                imageView.setImageResource(R.drawable.img3)
             } else {
-                imageView.setImageResource(R.drawable.img2) // когда выключен
+                imageView.setImageResource(R.drawable.img2)
             }
         }
     }
